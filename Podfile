@@ -6,6 +6,6 @@ target 'CarRepairDatabase' do
   use_frameworks!
 
   # Pods for CarRepairDatabase
- pod 'RealmSwift', '~> 3.20.0'
+ pod 'RealmSwift', '~> 10.0.0'
 
 end
