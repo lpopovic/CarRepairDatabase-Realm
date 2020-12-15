@@ -13,9 +13,13 @@
 		D0A430F625891A4200085CB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A430F425891A4200085CB8 /* Main.storyboard */; };
 		D0A430F825891A4300085CB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A430F725891A4300085CB8 /* Assets.xcassets */; };
 		D0A430FB25891A4300085CB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A430F925891A4300085CB8 /* LaunchScreen.storyboard */; };
+		E65F9922A6ED70953127D0A7 /* Pods_CarRepairDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8503146A73E49C7F2C4E503F /* Pods_CarRepairDatabase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		244428D4A1553B0C2AAF4F4F /* Pods-CarRepairDatabase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRepairDatabase.release.xcconfig"; path = "Target Support Files/Pods-CarRepairDatabase/Pods-CarRepairDatabase.release.xcconfig"; sourceTree = "<group>"; };
+		8503146A73E49C7F2C4E503F /* Pods_CarRepairDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRepairDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0AC25A7BE66B17607752EFF /* Pods-CarRepairDatabase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRepairDatabase.debug.xcconfig"; path = "Target Support Files/Pods-CarRepairDatabase/Pods-CarRepairDatabase.debug.xcconfig"; sourceTree = "<group>"; };
 		D0A430EB25891A4200085CB8 /* CarRepairDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRepairDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A430EE25891A4200085CB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A430F025891A4200085CB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65F9922A6ED70953127D0A7 /* Pods_CarRepairDatabase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30FC6E4B99E2C8E9A9A4BD4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0AC25A7BE66B17607752EFF /* Pods-CarRepairDatabase.debug.xcconfig */,
+				244428D4A1553B0C2AAF4F4F /* Pods-CarRepairDatabase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		975C8C568528E66402C357CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8503146A73E49C7F2C4E503F /* Pods_CarRepairDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0A430E225891A4200085CB8 = {
 			isa = PBXGroup;
 			children = (
 				D0A430ED25891A4200085CB8 /* CarRepairDatabase */,
 				D0A430EC25891A4200085CB8 /* Products */,
+				30FC6E4B99E2C8E9A9A4BD4A /* Pods */,
+				975C8C568528E66402C357CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A430FF25891A4300085CB8 /* Build configuration list for PBXNativeTarget "CarRepairDatabase" */;
 			buildPhases = (
+				2B88A0CE1417BD7F974BC5BE /* [CP] Check Pods Manifest.lock */,
 				D0A430E725891A4200085CB8 /* Sources */,
 				D0A430E825891A4200085CB8 /* Frameworks */,
 				D0A430E925891A4200085CB8 /* Resources */,
+				CD6F520A30454ABDD82994F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B88A0CE1417BD7F974BC5BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarRepairDatabase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD6F520A30454ABDD82994F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRepairDatabase/Pods-CarRepairDatabase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRepairDatabase/Pods-CarRepairDatabase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarRepairDatabase/Pods-CarRepairDatabase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0A430E725891A4200085CB8 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		D0A4310025891A4300085CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AC25A7BE66B17607752EFF /* Pods-CarRepairDatabase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		D0A4310125891A4300085CB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244428D4A1553B0C2AAF4F4F /* Pods-CarRepairDatabase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

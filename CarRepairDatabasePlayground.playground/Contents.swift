@@ -1,3 +1,7 @@
-import UIKit
+import Foundation
+import RealmSwift
 
-var str = "Hello, playground"
+// MARK: -  Setup
+let realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: "TemporaryRealm"))
+
+print("Ready to play!")
